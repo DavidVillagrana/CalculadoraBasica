@@ -1,0 +1,51 @@
+.switch {
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+}
+
+
+.toggle {
+    background-color: var(--terciario);
+    width: 4.5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slider {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--secundario);
+    padding: 0;
+    margin: 3px;
+    transform: translateX(2.5rem);
+    transition: 500ms;
+}
+
+.textLeft {
+    align-items:self-start;
+}
+
+
+
+/* === ESTADO: MODO NOCHE (MOVER A LA IZQUIERDA) === */
+input[type="checkbox"]:not(:checked) + .slider {
+  background: #f1c40f; /* Sol (amarillo) */
+  box-shadow: 0 0 20px 5px #f1c40f; /* Brillo solar */
+  transform: translateX(0); /* Círculo queda a la izquierda */
+}
+
+/* === ESTADO: MODO DÍA (MOVER A LA DERECHA, SIMULA LUNA) === */
+input[type="checkbox"]:checked + .slider {
+  background: #ffffff; /* Blanco = luna */
+  box-shadow: inset -5px -5px 0 0 #ccc; /* Sombra interna = cráteres */
+  transform: translateX(40px); /* Mueve el círculo a la derecha */
+}
+
+.check-switch:checked + .slider{
+    transform: translateX(0);
+}

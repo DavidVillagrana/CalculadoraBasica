@@ -1,0 +1,53 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    /* Colores tema claro calculadora*/
+  --fondo: #17171C; 
+
+  --fondo-calculadora: #F1F2F3; 
+  --texto: #000000; 
+  --primario: #fea312; 
+  --secundario: #666666;
+  --terciario: #DDDDDD ; 
+
+  --box-shadow: 0 0 50px rgba(0, 0, 0, 0.20);
+
+  background-color: var(--fondo);
+  color: var(--texto);
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  transition: 1000ms;
+}
+
+*,
+*::before
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+
+}
+
+
+/* Colores modo oscuro*/
+[data-theme='oscuro'] {
+  --fondo:  #F1F2F3;
+
+  --fondo-calculadora: #17171C;
+  --texto: #FFFFFF; 
+  --primario: #fea312; 
+  --secundario:  #616065; 
+  --terciario: #313032; 
+}
+
